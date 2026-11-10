@@ -1,0 +1,851 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fb;
+    color: #172b4d;
+}
+
+/* DASHBOARD NAVBAR */
+.dashboard-navbar {
+    background: #102a43;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-navbar h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.dashboard-navbar h1 span {
+    color: #55c2e8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.account-label {
+    color: #d5e4f0;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background: #eaf5ff;
+    color: #102a43;
+    border: none;
+    padding: 10px 23px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+.dashboard-container {
+    width: 86%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 20px;
+}
+
+.welcome-section h2 {
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.welcome-section p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.account-info {
+    background: white;
+    padding: 13px 22px;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.account-info span {
+    color: #8493a8;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.account-info strong {
+    font-size: 16px;
+}
+
+/* BALANCE CARD */
+.balance-card {
+    background: linear-gradient(120deg, #102a43, #176b87);
+    color: white;
+    padding: 30px 38px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+    box-shadow: 0 8px 22px rgba(16, 42, 67, 0.15);
+}
+
+.balance-card p {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #c4e7f3;
+    margin-bottom: 12px;
+}
+
+.balance-card h1 {
+    font-size: 38px;
+    margin-bottom: 7px;
+}
+
+.balance-note {
+    font-size: 12px;
+    color: #d2e8f1;
+}
+
+.balance-card button {
+    background: white;
+    color: #102a43;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* BANKING SERVICES */
+.operations-section h2,
+.transaction-section h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.section-subtitle,
+.transaction-heading p {
+    color: #8290a5;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+/* THREE HORIZONTAL CARDS */
+.operations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.operation-card {
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.045);
+    border: 1px solid #e8edf4;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.operation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.operation-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.deposit-card .operation-icon {
+    background: #e1f8ed;
+    color: #15965b;
+}
+
+.withdraw-card .operation-icon {
+    background: #fff0e2;
+    color: #dc8129;
+}
+
+.transfer-card .operation-icon {
+    background: #e8efff;
+    color: #426bd6;
+}
+
+.operation-card h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.operation-card p {
+    font-size: 12px;
+    color: #8995a8;
+    margin-bottom: 18px;
+}
+
+.operation-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce4ee;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.operation-card input:focus {
+    border-color: #2384ad;
+    box-shadow: 0 0 0 2px rgba(35, 132, 173, 0.1);
+}
+
+.operation-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #176b87;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.operation-card button:hover {
+    background: #102a43;
+}
+
+/* MESSAGE */
+.message-section {
+    margin-top: 18px;
+    min-height: 22px;
+}
+
+#message {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* TRANSACTION HISTORY */
+.transaction-section {
+    background: white;
+    padding: 26px;
+    border-radius: 13px;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.transaction-heading {
+    border-bottom: 1px solid #edf0f5;
+    margin-bottom: 15px;
+}
+
+.transaction-heading p {
+    margin-top: 7px;
+}
+
+.transaction-history {
+    color: #718096;
+    font-size: 14px;
+    white-space: pre-wrap;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+.dashboard-footer {
+    text-align: center;
+    padding: 22px;
+    color: #8995a8;
+    font-size: 12px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .operations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-container {
+        width: 92%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-navbar {
+        padding: 17px 5%;
+    }
+
+    .dashboard-navbar h1 {
+        font-size: 20px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .account-label {
+        display: none;
+    }
+
+    .dashboard-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .welcome-section {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .balance-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .balance-card h1 {
+        font-size: 32px;
+    }
+
+    .operations {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction-section {
+        padding: 20px;
+    }
+}
+
+/* PROFILE PAGE */
+
+.profile-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 45px auto;
+}
+
+.profile-heading {
+    margin-bottom: 25px;
+}
+
+.profile-heading h2 {
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.profile-heading p {
+    color: #8290a5;
+    font-size: 14px;
+}
+
+.profile-card {
+    background: white;
+    padding: 38px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-avatar {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 15px;
+    background: #176b87;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.profile-card h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.profile-subtitle {
+    color: #8290a5;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    text-align: left;
+}
+
+.profile-detail {
+    background: #f4f7fb;
+    padding: 20px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.profile-detail span {
+    color: #8290a5;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+}
+
+.profile-detail strong {
+    color: #172b4d;
+    font-size: 16px;
+}
+
+.profile-back-btn {
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #176b87;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile-back-btn:hover {
+    background: #102a43;
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        margin: 25px auto;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LOGIN AND REGISTER PAGES */
+
+.navbar {
+    background: #102a43;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #55c2e8;
+}
+
+.auth-section {
+    min-height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: white;
+    padding: 38px;
+    border-radius: 15px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e8edf4;
+}
+
+.auth-card h1 {
+    font-size: 27px;
+    color: #102a43;
+    margin-bottom: 9px;
+}
+
+.auth-card > p {
+    color: #8290a5;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #172b4d;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce4ee;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 19px;
+    font-size: 14px;
+}
+
+.auth-card input:focus {
+    border-color: #2384ad;
+    box-shadow: 0 0 0 2px rgba(35, 132, 173, 0.1);
+}
+
+.btn.primary {
+    width: 100%;
+    padding: 13px;
+    background: #176b87;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.btn.primary:hover {
+    background: #102a43;
+}
+
+.auth-card #message {
+    margin-top: 15px;
+}
+
+.auth-card a {
+    color: #176b87;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 17px 5%;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
+
+/* HOME PAGE DESIGN */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #55c2e8;
+}
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(120deg, #102a43, #176b87);
+    display: flex;
+    align-items: center;
+    padding: 75px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #8edcf3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #72d2ed;
+}
+
+.description {
+    max-width: 480px;
+    color: #d5e7f0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.buttons .primary {
+    background: white;
+    color: #102a43;
+}
+
+.buttons .secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.buttons .btn:hover {
+    opacity: 0.85;
+}
+
+.features {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.section-heading > p,
+.about > p:first-child {
+    color: #176b87;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 29px;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.section-heading > span {
+    color: #8290a5;
+    font-size: 14px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 38px;
+}
+
+.feature-card {
+    background: white;
+    padding: 28px 20px;
+    border: 1px solid #e8edf4;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 17px;
+    background: #e8f4fa;
+    color: #176b87;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    color: #172b4d;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #8290a5;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.about {
+    background: white;
+    text-align: center;
+    padding: 65px 12%;
+    border-top: 1px solid #e8edf4;
+}
+
+.about > p:not(:first-child) {
+    max-width: 700px;
+    margin: 15px auto 25px;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.about .btn {
+    display: inline-block;
+    background: #176b87;
+    color: white;
+    text-decoration: none;
+    padding: 13px 27px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.about .btn:hover {
+    background: #102a43;
+}
+
+@media (max-width: 900px) {
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .features {
+        padding: 50px 6%;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 50px 7%;
+    }
+}
+
+/* FIX CREATE ACCOUNT BUTTON TEXT VISIBILITY */
+
+.btn.primary,
+.btn.primary:hover,
+.btn.primary:focus,
+.btn.primary:active {
+    background-color: #176b87;
+    color: #ffffff;
+}
+
+.btn.primary:focus-visible {
+    outline: 2px solid #55c2e8;
+    outline-offset: 3px;
+}
+/* MATCH ACCOUNT TYPE DROPDOWN WITH OTHER INPUT FIELDS */
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+select:focus {
+    border-color: #176b87;
+}

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJNA BANK - Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SJNA BANK</div>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <section class="auth-section">
+        <div class="auth-card">
+
+            <h1>Create Your Account</h1>
+            <p>Join SJNA BANK today.</p>
+
+            <form id="registerForm">
+
+                <label for="accountNumber">Account Number</label>
+                <input
+                    type="text"
+                    id="accountNumber"
+                    placeholder="Enter account number"
+                    required
+                >
+
+                <label for="accountHolder">Full Name</label>
+                <input
+                    type="text"
+                    id="accountHolder"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="accountType">Account Type</label>
+                <select id="accountType" required>
+                    <option value="">Select Account Type</option>
+                    <option value="Savings">Savings Account</option>
+                    <option value="Current">Current Account</option>
+                </select>
+
+                <label for="pin">4-Digit PIN</label>
+                <input
+                    type="password"
+                    id="pin"
+                    placeholder="Enter 4-digit PIN"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    required
+                >
+
+                <button type="submit" class="btn primary">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+            <p>
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer class="dashboard-footer">
+        <p>© 2026 SJNA BANK | Online Banking Transaction Simulator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

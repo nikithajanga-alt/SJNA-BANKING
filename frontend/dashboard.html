@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJNA BANK - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- NAVBAR -->
+    <header class="dashboard-navbar">
+        <h1>SJNA <span>BANK</span></h1>
+
+        <div class="nav-right">
+            <button class="logout-btn"
+                onclick="window.location.href='profile.html'">
+                My Account
+            </button>
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div>
+                <h2>Welcome, <span id="customerName">Customer</span>!</h2>
+                <p>Here's an overview of your banking activity.</p>
+            </div>
+
+            <div class="account-info">
+                <span>ACCOUNT NUMBER</span>
+                <strong id="accountNumber"></strong>
+
+                <br><br>
+
+                <span>ACCOUNT TYPE</span>
+                <strong id="dashboardAccountType">Loading...</strong>
+            </div>
+        </section>
+
+        <!-- BALANCE CARD -->
+        <section class="balance-card">
+            <div>
+                <p>AVAILABLE BALANCE</p>
+                <h1>₹ <span id="balance">0.00</span></h1>
+                <span class="balance-note">Your current account balance</span>
+            </div>
+
+            <button onclick="loadBalance()">↻ Refresh Balance</button>
+        </section>
+
+        <!-- BANKING OPERATIONS -->
+        <section class="operations-section">
+            <h2>Banking Services</h2>
+            <p class="section-subtitle">Choose an operation to continue.</p>
+
+            <div class="operations">
+
+                <div class="operation-card deposit-card">
+                    <div class="operation-icon">＋</div>
+                    <h3>Deposit Money</h3>
+                    <p>Add money to your account.</p>
+
+                    <input type="number" id="depositAmount"
+                        placeholder="Enter amount" min="0.01" step="0.01">
+
+                    <button onclick="depositMoney()">Deposit Money</button>
+                </div>
+
+                <div class="operation-card withdraw-card">
+                    <div class="operation-icon">－</div>
+                    <h3>Withdraw Money</h3>
+                    <p>Withdraw from your account.</p>
+
+                    <input type="number" id="withdrawAmount"
+                        placeholder="Enter amount" min="0.01" step="0.01">
+
+                    <button onclick="withdrawMoney()">Withdraw Money</button>
+                </div>
+
+                <div class="operation-card transfer-card">
+                    <div class="operation-icon">⇄</div>
+                    <h3>Transfer Money</h3>
+                    <p>Send money to another account.</p>
+
+                    <input type="text" id="receiverAccount"
+                        placeholder="Receiver account number">
+
+                    <input type="number" id="transferAmount"
+                        placeholder="Enter amount" min="0.01" step="0.01">
+
+                    <button onclick="transferMoney()">Send Money</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MESSAGE -->
+        <section class="message-section">
+            <p id="message"></p>
+        </section>
+
+        <!-- TRANSACTION HISTORY -->
+        <section class="transaction-section">
+            <div class="transaction-heading">
+                <div>
+                    <h2>Recent Transactions</h2>
+                    <p>Your account activity and transaction records.</p>
+                </div>
+            </div>
+
+            <div id="transactionHistory" class="transaction-history">
+                <p>No transactions found.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2026 SJNA BANK | Online Banking Transaction Simulator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

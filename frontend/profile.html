@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJNA BANK - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="dashboard-navbar">
+        <h1>SJNA <span>BANK</span></h1>
+
+        <div class="nav-right">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main class="profile-container">
+
+        <div class="profile-heading">
+            <h2>My Profile</h2>
+            <p>View your account information.</p>
+        </div>
+
+        <section class="profile-card">
+
+            <div class="profile-avatar" id="profileAvatar">N</div>
+
+            <h2 id="profileName">Loading...</h2>
+            <p class="profile-subtitle">SJNA BANK Customer</p>
+
+            <div class="profile-details">
+
+                <div class="profile-detail">
+                    <span>ACCOUNT HOLDER</span>
+                    <strong id="profileHolder">Loading...</strong>
+                </div>
+
+                <div class="profile-detail">
+                    <span>ACCOUNT NUMBER</span>
+                    <strong id="profileAccount">Loading...</strong>
+                </div>
+
+                <div class="profile-detail">
+                    <span>ACCOUNT TYPE</span>
+                    <strong id="profileAccountType">Loading...</strong>
+                </div>
+
+                <div class="profile-detail">
+                    <span>AVAILABLE BALANCE</span>
+                    <strong>₹ <span id="profileBalance">0.00</span></strong>
+                </div>
+
+            </div>
+
+            <button class="profile-back-btn"
+                onclick="window.location.href='dashboard.html'">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2026 SJNA BANK | Online Banking Transaction Simulator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

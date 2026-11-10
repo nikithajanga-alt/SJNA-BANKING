@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJNA BANK - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- NAVBAR -->
+    <header class="dashboard-navbar">
+        <h1>SJNA <span>BANK</span></h1>
+
+        <div class="nav-right">
+            <button class="logout-btn"
+                onclick="window.location.href='index.html'">
+                Home
+            </button>
+        </div>
+    </header>
+
+    <!-- LOGIN SECTION -->
+    <main class="auth-section">
+        <div class="auth-card">
+
+            <h1>Welcome Back!</h1>
+            <p>Login to your SJNA BANK account.</p>
+
+            <form id="loginForm">
+
+                <label for="accountNumber">Account Number</label>
+                <input
+                    type="text"
+                    id="accountNumber"
+                    placeholder="Enter your account number"
+                    required
+                >
+
+                <label for="pin">4-Digit PIN</label>
+                <input
+                    type="password"
+                    id="pin"
+                    placeholder="Enter your 4-digit PIN"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    required
+                >
+
+                <button type="submit" class="btn primary">
+                    Login to Account
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+            <p class="auth-switch">
+                Don't have an account?
+                <a href="register.html">Create Account</a>
+            </p>
+
+        </div>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2026 SJNA BANK | Online Banking Transaction Simulator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
